@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>Django Home Page</h1>
+    {% if user.is_authenticated %}
+      <h2>Welcom {{ user.username }},</h2>
+    {% endif %}
+  </div>
+{% endblock %}
